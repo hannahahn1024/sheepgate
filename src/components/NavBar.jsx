@@ -1,13 +1,14 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from "react-router-dom"
 import logo from '../assets/church_logo.jpeg'
 
 const navigation = [
-  { name: '교회소개', href: '#', current: true, dropdown: ['양문교회', '섬기는 사람들', '오시는 길'] },
-  { name: '예배', href: '#', current: false, dropdown: ['예배안내', '주일예배', '수요예배', '특별예배', '가정예배', '가정예배 나눔'] },
-  { name: '사역', href: '#', current: false, dropdown: ['영유아부 (Hishow)','어와나 (AWANA)', '아동청소년 (Teens)', '청년부 (여호수아)', '목장모임', '주일세미나', 'with북카페'] },
-  { name: '커뮤니티', href: '#', current: false, dropdown: ['주간소식', '새가족', '교회갤러리', '교회동영상', '교회소식지', '선교지 소식', 'CBS칼럼', 'CBS 반가운 오늘', '교회행정서류'] },
+  { name: '교회소개', href: '/sheepgate', current: true, dropdown: [{name: '양문교회', link: '/sheepgate'}, {name: '섬기는 사람들', link: ''}, {name: '오시는 길', link: ''}] },
+  { name: '예배', href: '/introduction', current: false, dropdown: [{name: '예배안내', link: '/introduction'}, {name: '주일예배', link: ''}, {name: '수요예배', link: ''}, {name: '특별예배', link: ''}, {name: '가정예배', link: ''}, {name: '가정예배 나눔', link: ''}] },
+  { name: '사역', href: '/hishow', current: false, dropdown: [{name: '영유아부 (Hishow)', link: '/hishow'},{name: '어와나 (AWANA)', link: ''}, {name: '아동청소년 (Teens)', link: ''}, {name: '청년부 (여호수아)', link: ''}, {name: '목장모임', link: ''}, {name: '주일세미나', link: ''}, {name: 'with북카페', link: ''}] },
+  { name: '커뮤니티', href: '/weeklynews', current: false, dropdown: [{name: '주간소식', link: '/weeklynews'}, {name: '새가족', link: ''}, {name: '교회갤러리', link: ''}, {name: '교회동영상', link: ''}, {name: '교회소식지', link: ''}, {name: '선교지 소식', link: ''}, {name: 'CBS칼럼', link: ''}, {name: 'CBS 반가운 오늘', link: ''}, {name: '교회행정서류', link: ''}] },
 ]
 
 function classNames(...classes) {
@@ -19,7 +20,7 @@ export default function Example() {
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-screen-3xl px-4 sm:px-8 lg:px-12">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -34,24 +35,26 @@ export default function Example() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
+                <Link to ="/">
                   <img
                     className="h-8 w-auto"
                     src= {logo}
-                    alt="Your Company"
+                    alt="sheepgate image"
                   />
+                </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-white text-yellow-600 outline' : 'text-gray-700 hover:bg-yellow-50 hover:text-yellow-600',
-                          'rounded-md px-3 py-2 text-sm font-med'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
+                        <a
+                          key={item.name}
+                          // href={item.href}
+                          className={classNames(
+                            item.current ? 'bg-white text-yellow-600 outline' : 'text-gray-700 hover:bg-yellow-50 hover:text-yellow-600',
+                            'rounded-md px-3 py-2 text-sm font-med'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
                         <Menu as="div" className="relative">
                           <div>
                             <Menu.Button className="relative flex rounded-full text-sm">
@@ -73,12 +76,14 @@ export default function Example() {
                               {item.dropdown.map((dropdownMenu, index) => (
                                 <Menu.Item key={index}>
                                   {({ active }) => (
-                                    <a
-                                      href="#"
-                                      className={classNames(active ? 'bg-yellow-50' : '', 'block px-4 py-2 text-sm text-yellow-700')}
-                                    >
-                                      {dropdownMenu}
-                                    </a>
+                                    <Link to={dropdownMenu.link}>
+                                      <a
+                                    
+                                        className={classNames(active ? 'bg-yellow-50' : '', 'block px-4 py-2 text-sm text-yellow-700')}
+                                      >
+                                        {dropdownMenu.name}
+                                      </a>
+                                    </Link>
                                   )}
                                 </Menu.Item>
                               ))}

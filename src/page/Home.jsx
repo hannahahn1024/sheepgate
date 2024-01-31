@@ -1,23 +1,30 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import WelcomeImage from '../assets/temp.jpg'
-import ScrollUp from '../components/ScrollUp'
+import { Link } from "react-router-dom"
 
 const Home = () => {
   
-  < ScrollUp />
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  
 
   return (
     <div>
       {/* NavBar */}
-      <NavBar />
       <div className='flex relative'>
         <div className=''>
           <img src={WelcomeImage} className='w-screen bg-cover bg-no-repeat' alt='Welcome Image'/>
         </div>
         <div className='absolute bottom-9 left-9 text-black text-lg pb-4 pl-6'>
           <h1 className='text-white text-5xl pb-5'>양문교회</h1>
-          <button className='text-white outline outline-2 backdrop-blur-md rounded-md py-3 px-3'>교회 알아보기</button>
+          <Link to ="/sheepgate">
+            <button className='text-white outline outline-2 backdrop-blur-md rounded-md py-3 px-3'>교회 알아보기</button>
+          </Link>
         </div>
       </div>
       
