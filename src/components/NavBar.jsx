@@ -6,7 +6,7 @@ import logo from '../assets/church_logo.jpeg'
 const navigation = [
   { name: '교회소개', href: '#', current: true, dropdown: ['양문교회', '섬기는 사람들', '오시는 길'] },
   { name: '예배', href: '#', current: false, dropdown: ['예배안내', '주일예배', '수요예배', '특별예배', '가정예배', '가정예배 나눔'] },
-  { name: '사역', href: '#', current: false, dropdown: ['영유아부 (Hishow)','어와나 (AWANA)', '아동청소년년 (Teens)', '청년부 (여호수아)', '목장모임', '주일세미나', 'with북카페'] },
+  { name: '사역', href: '#', current: false, dropdown: ['영유아부 (Hishow)','어와나 (AWANA)', '아동청소년 (Teens)', '청년부 (여호수아)', '목장모임', '주일세미나', 'with북카페'] },
   { name: '커뮤니티', href: '#', current: false, dropdown: ['주간소식', '새가족', '교회갤러리', '교회동영상', '교회소식지', '선교지 소식', 'CBS칼럼', 'CBS 반가운 오늘', '교회행정서류'] },
 ]
 
