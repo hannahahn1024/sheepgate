@@ -3,20 +3,28 @@ import { useState } from 'react'
 import {Routes, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './page/Home'
-import Instruction from './page/Introduction/'
 import Sheepgate from "./page/Sheepgate"
-import Hishow from "./page/Hishow"
-import Weekly from "./page/Weekly"
 import Awana from "./page/Awana"
+import BookCafe from "./page/BookCafe"
 import FamilyService from "./page/FamilyService"
 import FamilySharing from "./page/FamilySharing"
-import BookCafeSmallGroup from "./page/bookcafe"
-import CBSColumnSpecialService from "./page/CBSColumn"
-import ChurchNewsSundayService from "./page/ChurchNews"
+import CBSColumn from "./page/CBSColumn"
+import CBSToday from "./page/CBSToday"
+import ChurchNews from "./page/ChurchNews"
 import Gallery from "./page/Gallery"
-
+import Hishow from "./page/Hishow"
+import Introduction from "./page/Introduction"
+import MissionNews from './page/MissionNews'
+import NewFamily from './page/NewFamily'
+import SmallGroup from './page/SmallGroup'
+import SpecialService from './page/SpecialService'
+import SundayService from './page/SundayService'
+import SundaySeminar from './page/SundaySeminar'
 import Teens from "./page/Teens"
+import Videos from './page/Videos'
 import WednesdayService from "./page/WednesdayService"
+import Weekly from "./page/Weekly"
+import WeeklyNews from './page/WeeklyNews'
 import YoungAdults from "./page/YoungAdults"
 
 function App() {
@@ -26,18 +34,27 @@ function App() {
       <Routes>
         <Route path = "/" element={<Home />} />
         <Route path = "/sheepgate" element={<Sheepgate />} />
-        <Route path = "/introduction" element={<Instruction />} />
-        <Route path = "/hishow" element={<Hishow />} />
-        <Route path = "/weeklynews" element={<Weekly />} />
         <Route path = "/awana" element={<Awana />} />
-        <Route path = "/familyservice" element={<FamilyService/>} />
+        <Route path = "/bookcafe" element={<BookCafe />} />
+        <Route path = "/cbscolumn" element={<CBSColumn />} />
+        <Route path = "/cbstoday" element={<CBSToday />} />
+        <Route path = "/churchnews" element={<ChurchNews />} />
+        <Route path = "/familyservice" element={<FamilyService />} />
         <Route path = "/familysharing" element={<FamilySharing />} />
+        <Route path = "/gallery" element={<Gallery />} />
+        <Route path = "/hishow" element={<Hishow />} />
+        <Route path = "/introduction" element={<Introduction />} />
+        <Route path = "/missionnews" element={<MissionNews />} />
+        <Route path = "/newfamily" element={<NewFamily />} />
         <Route path = "/smallgroup" element={<SmallGroup />} />
         <Route path = "/specialservice" element={<SpecialService />} />
-
+        <Route path = "/sundayseminar" element={<SundaySeminar />} />
         <Route path = "/sundayservice" element={<SundayService />} />
         <Route path = "/teens" element={<Teens />} />
+        <Route path = "/videos" element={<Videos />} />
         <Route path = "/wednesdayservice" element={<WednesdayService />} />
+        <Route path = "/weekly" element={<Weekly />} />
+        <Route path = "/weeklynews" element={<WeeklyNews />} />
         <Route path = "/youngadults" element={<YoungAdults />} />
       </Routes>
     </div>
