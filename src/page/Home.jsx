@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react';
 import NavBar from '../components/NavBar'
 import WelcomeImage from '../assets/temp.jpg'
 import { Link } from "react-router-dom"
 
 const Home = () => {
+  const [images, setImage] = useState(WelcomeImage);
+
+  const handleImage = (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+
+      reader.readAsDataURL(file);
+    }
+  };
   
   const scrollToTop = () => {
     window.scrollTo({
@@ -18,7 +33,13 @@ const Home = () => {
       {/* NavBar */}
       <div className='flex relative'>
         <div className=''>
-          <img src={WelcomeImage} className='w-screen bg-cover bg-no-repeat' alt='Welcome Image'/>
+          <label>
+              <input type='file' accept='image/*' onChange={handleImage} className='hidden absolute top-0 right-0'/>
+                  Change Welcome Image 
+            </label>
+            {images && (
+              <img src={images} alt='Welcom Image' className='w-screen'/>
+            )}
         </div>
         <div className='absolute bottom-9 left-9 text-black text-lg pb-4 pl-6'>
           <h1 className='text-white text-5xl pb-5'>양문교회</h1>
@@ -32,7 +53,7 @@ const Home = () => {
       <button class="fixed bottom-4 right-4 outline outline-2 backdrop-blur-md rounded-3xl py-2 px-4 font-extrabold"
       onClick={scrollToTop}>⭡</button>
       {/* Grid images */}
-      <div class ="grid grid-cols-4 gap-4">
+      <div class ="grid grid-cols-4 gap-4 mx-5">
         <div className='outline outline-2 rounded-sm outline-slate-300'>
           <h1>교회 갤러리</h1>
           
