@@ -30,7 +30,7 @@ export function SidebarItem({ text, path, active, alent }) {
         transition-colors group scrollPage w-48
         ${active
           ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-          : "hover:bg-indigo-50 text-gray-600"
+          : "hover:bg-yellow-50 text-yellow-600"
         }
       `}
       onClick={handleNavigate}
