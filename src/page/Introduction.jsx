@@ -6,7 +6,7 @@ const Introduction = () => {
   
     
     <div className='flex'>
-       <div className='w-52'>
+       <div className='w-44'>
         <Sidebar>
           <SidebarItem text="예배안내" path="/introduction"/>
           <SidebarItem text="주일예배" path="/sundayservice"/>

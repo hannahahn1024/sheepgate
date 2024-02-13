@@ -38,7 +38,7 @@ const Home = () => {
                   Change Welcome Image 
             </label>
             {images && (
-              <img src={images} alt='Welcom Image' className='w-screen'/>
+              <img src={images} alt='Welcome Image' className='w-screen'/>
             )}
         </div>
         <div className='absolute bottom-9 left-9 text-black text-lg pb-4 pl-6'>
