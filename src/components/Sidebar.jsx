@@ -5,7 +5,7 @@ const SidebarContext = createContext();
 
 export default function Sidebar({ children }) {
   return (
-    <aside className={`h-screen w-44 transition-all duration-300 fixed`}>
+    <aside className={`h-screen w-36 transition-all duration-300 fixed`}>
       <nav className="h-full flex flex-col shadow-sm">
         <SidebarContext.Provider value={true}>
           <ul className="flex-1 px-3 flex flex-col items-center justify-top">{children}</ul>
@@ -35,7 +35,7 @@ export function SidebarItem({ text, path, active, alent }) {
       `}
       onClick={handleNavigate}
     >
-      <span className={`overflow-hidden transition-all w-36 ml-1 `}>{text}</span>
+      <span className={`overflow-hidden transition-all w-36 ml-5`}>{text}</span>
       {alent && <div className={`absolute right-2 w-2 h-2 rounded bg-indigo-400`} />}
     </li>
   );
