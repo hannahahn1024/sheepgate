@@ -1,5 +1,4 @@
 import { createContext } from "react";
-import { useNavigate } from "react-router-dom";
 
 const SidebarContext = createContext();
 
@@ -15,12 +14,18 @@ export default function Sidebar({ children }) {
   );
 }
 
-export function SidebarItem({ text, path, active }) {
-    const navigate = useNavigate();
+export function SidebarItem({ text, path, active, scrollElement }) {
+  const scrollPage = (pageId) => {
+    const pageElement = document.getElementById(pageId);
 
-    const handleNavigate = () => {
-        navigate(path);
+    if (pageElement && scrollElement.current) {
+      pageElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest', 
+        inline: 'start', 
+      });
     }
+  };
 
   return (
     <li
@@ -33,7 +38,7 @@ export function SidebarItem({ text, path, active }) {
           : "hover:bg-yellow-50 text-yellow-600"
         }
       `}
-      onClick={handleNavigate}
+      onClick={() => scrollPage(path)}
     >
       <span className={`overflow-hidden transition-all w-36 ml-5`}>{text}</span>
     </li>

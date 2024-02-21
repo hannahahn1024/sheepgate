@@ -48,7 +48,7 @@ function Carousel2({slides}) {
             onClick={() => goToSlide(slideIndex)}
             className='text-2xl cursor-pointer'
           >
-            <RxDotFilled />
+            <RxDotFilled style={{ color: slideIndex === currentIndex ? 'orange' : 'black' }} />
           </div>
         ))}
       </div>

@@ -14,9 +14,6 @@ const SundayService = () => {
         <SidebarItem text="가정예배 나눔" path="/familysharing"/>
       </Sidebar>
       <div className='text-center'>Sunday Service</div>
-      <div>
-      < Carousel2 />
-      </div>
     </div>
   )
 }
