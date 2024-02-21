@@ -3,7 +3,7 @@ import Sidebar, { SidebarItem } from '../components/Sidebar'
 
 const NewFamily = () => {
   return (
-    <div className>
+    <div>
       <Sidebar>
         <SidebarItem text="주간소식" path="/weeklynews"/>
         <SidebarItem text="새가족" path="/newfamily"/>

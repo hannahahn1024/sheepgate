@@ -15,11 +15,10 @@ export default function Sidebar({ children }) {
 }
 
 export function SidebarItem({ text, path, active, scrollElement }) {
-  const scrollPage = (pageId) => {
-    const pageElement = document.getElementById(pageId);
-  
+  const scrollPage = (path) => {
+    const pageElement = document.getElementById(path);
     if (pageElement && scrollElement.current) {
-      scrollElement.current.scroll({
+      window.scrollTo({
         top: pageElement.offsetTop,
         behavior: 'smooth',
       });
@@ -29,14 +28,14 @@ export function SidebarItem({ text, path, active, scrollElement }) {
   return (
     <li
       className={`
-        relative flex items-center py-2 my-1
-        font-medium rounded-md cursor-pointer
-        transition-colors group scrollPage w-36
-        ${active
-          ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800 "
-          : "hover:bg-yellow-50 text-yellow-600"
-        }
-      `}
+      relative flex items-center py-2 my-1
+      font-medium rounded-md cursor-pointer
+      transition-colors group scrollPage w-36
+      ${active
+        ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800 "
+        : "hover:bg-yellow-50 text-yellow-600"
+      }
+    `}
       onClick={() => scrollPage(path)}
     >
       <span className={`overflow-hidden transition-all w-36 ml-5`}>{text}</span>

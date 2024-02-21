@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom"
 import logo from '../assets/church_logo.jpeg'
 
@@ -48,7 +48,6 @@ export default function Example() {
                     {navigation.map((item) => (
                         <a
                           key={item.name}
-                          // href={item.href}
                           className={classNames(
                             item.current ? 'bg-white text-yellow-600 outline' : 'text-gray-700 hover:bg-yellow-50 hover:text-yellow-600',
                             'rounded-md px-3 py-2 text-sm font-med'
@@ -75,16 +74,11 @@ export default function Example() {
                               <Menu.Items className="absolute left-1/2 transform -translate-x-1/2 top-full z-10 mt-3 w-40 origin-top-right bg-white py-1 shadow-lg ring-1 ring-yellow-800 ring-opacity-5 focus:outline-none">
                               {item.dropdown.map((dropdownMenu, index) => (
                                 <Menu.Item key={index}>
-                                  {({ active }) => (
-                                    <Link to={dropdownMenu.link}>
-                                      <a
-                                    
-                                        className={classNames(active ? 'bg-yellow-50' : '', 'block px-4 py-2 text-sm text-yellow-700')}
-                                      >
-                                        {dropdownMenu.name}
-                                      </a>
-                                    </Link>
-                                  )}
+                                {({ active }) => (
+                                  <Link to={dropdownMenu.link} className={classNames(active ? 'bg-yellow-50' : '', 'block px-4 py-2 text-sm text-yellow-700')}>
+                                    {dropdownMenu.name}
+                                  </Link>
+                                )}
                                 </Menu.Item>
                               ))}
                             </Menu.Items>

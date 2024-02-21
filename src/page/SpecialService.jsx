@@ -3,7 +3,7 @@ import Sidebar, { SidebarItem } from '../components/Sidebar'
 
 const SpecialService = () => {
   return (
-    <div className>
+    <div>
       <Sidebar>
         <SidebarItem text="예배안내" path="/introduction"/>
         <SidebarItem text="주일예배" path="/sundayservice"/>

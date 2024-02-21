@@ -50,10 +50,10 @@ const Home = () => {
       </div>
       
       <div className='text-lg mt-6'>교회 안내</div>
-      <button class="fixed bottom-4 right-4 outline outline-2 backdrop-blur-md rounded-3xl py-2 px-4 font-extrabold"
+      <button className="fixed bottom-4 right-4 outline outline-2 backdrop-blur-md rounded-3xl py-2 px-4 font-extrabold"
       onClick={scrollToTop}>⭡</button>
       {/* Grid images */}
-      <div class ="grid grid-cols-4 gap-4 mx-5">
+      <div className ="grid grid-cols-4 gap-4 mx-5">
         <div className='outline outline-2 rounded-sm outline-slate-300'>
           <h1>교회 갤러리</h1>
           
