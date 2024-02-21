@@ -17,16 +17,15 @@ export default function Sidebar({ children }) {
 export function SidebarItem({ text, path, active, scrollElement }) {
   const scrollPage = (pageId) => {
     const pageElement = document.getElementById(pageId);
-
+  
     if (pageElement && scrollElement.current) {
-      pageElement.scrollIntoView({
+      scrollElement.current.scroll({
+        top: pageElement.offsetTop,
         behavior: 'smooth',
-        block: 'nearest', 
-        inline: 'start', 
       });
     }
   };
-
+  
   return (
     <li
       className={`

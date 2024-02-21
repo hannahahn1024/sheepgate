@@ -33,6 +33,13 @@ const Sheepgate = () => {
 
   const scrollElement = useRef(null);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   const slides = [
     {
       url: min1,
@@ -81,24 +88,26 @@ const Sheepgate = () => {
   return (
     
     <div className='flex'>
+      
       <div className='w-44'>
         <Sidebar>
-          <SidebarItem text="양문교회" path="/church" scrollElement={scrollElement} />
+          <SidebarItem text="양문교회" path="church" scrollElement={scrollElement} />
           <SidebarItem text="섬기는 사람들" path="minister" scrollElement={scrollElement}/>
           <SidebarItem text="후원단체" path="/sheepgate" scrollElement={scrollElement}/>
           <SidebarItem text="오시는 길" path="/sheepgate" scrollElement={scrollElement}/>
         </Sidebar>
       </div>
+      
       <div className='border'>
-        <div className='flex relative'>
+        <div className='flex relative' id='church'>
           <img src={SheepImage} alt="Sheep Image" className='w-screen h-[90vh]'/>
           <div className='absolute -bottom-16 left-12 h-52 text-4xl font-bold whitespace-pre-line pointer-events-none text-white'>
             {bibleVerse}
           </div>
         </div>
       <div className='text-center whitespace-pre-line pb-10 pt-10 bg-red-50 font-bold pointer-events-none border'> {welcomeText}</div>
-        <div className='bg-blue-50 border'>
-          <div className='text-center text-3xl pb-10 font-bold pt-10' id='minister'>섬기는 사람들</div>
+        <div className='bg-blue-50 border' id='minister'>
+          <div className='text-center text-3xl pb-10 font-bold pt-10'>섬기는 사람들</div>
           <div class= 'grid grid-cols-2 gap-12 pb-10'>
             <div className='text-xl ml-48'>
               <div className='mb-3 font-bold'>
@@ -149,13 +158,13 @@ const Sheepgate = () => {
           </div>
         </div>
         
-        <div className='bg-purple-50 border'>
+        <div className='bg-purple-50 border text-center pb-10'>
           <div className='text-center text-3xl mb-10 pt-10 font-bold'>후원단체</div>
           <div className='grid grid-cols-3'>
-            <div>
+            <div className='ml-10'>
               <div className='mb-2 font-bold text-lg'>강원 CBS</div>
               <a href="https://www.cbs.co.kr/" target="_blank" rel="noopener noreferrer">
-              <img src={min11} alt='cbs logo' className='flex w-1/2 mx-auto'/>
+              {/* <img src={min11} alt='cbs logo' className='flex w-1/2 mx-auto'/> */}
                 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                   더 알아보기
                 </button>
@@ -163,18 +172,19 @@ const Sheepgate = () => {
             </div>
             <div>
               <div className='mb-2 font-bold text-lg'>한국 AWANA</div>
+              <div>
+              </div>
               <a href="http://www.awanakorea.net/" target="_blank" rel="noopener noreferrer">
-              {/* <img src={awana_logo} alt='awana' className='flex w-1/2 mx-auto'/> */}
                 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                   더 알아보기
                 </button>
               </a>
             </div>
             <div>
-              {/* <div className='mb-2 font-bold text-lg'>원주세브란스기독병원</div> */}
+        
               <div>
                 <div className='mb-2 font-bold text-lg'>원주세브란스기독병원</div>
-                {/* <img src={wonjuhospital} alt='hospital' className=' w-1/2 mx-auto'/> */}
+    
                 <a href="https://www.ywmc.or.kr/web/www" target="_blank" rel="noopener noreferrer">
                   <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                     더 알아보기
@@ -191,7 +201,10 @@ const Sheepgate = () => {
             </div>
           </div>
         </div>
+        
       </div>
+      <button class="fixed bottom-4 right-4 outline outline-2 backdrop-blur-md rounded-3xl py-2 px-4 font-extrabold"
+      onClick={scrollToTop}>⭡</button>
     </div>
   )
 }
