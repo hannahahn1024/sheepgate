@@ -22,8 +22,8 @@ import min12 from '../assets/min12.png'
 import min13 from '../assets/min13.png'
 import min14 from '../assets/min14.png'
 import wonjuhospital from '../assets/wonju_severance.jpg'
-import awana_logo from '../assets/awana-logo.png'
 import cbs_logo from '../assets/cbs-logo.png'
+import awana_logo from '../assets/awana_logo.png'
 import Carousel from '../components/Carousel'
 
 const Sheepgate = () => {
@@ -164,7 +164,7 @@ const Sheepgate = () => {
             <div className='ml-10'>
               <div className='mb-2 font-bold text-lg'>강원 CBS</div>
               <a href="https://www.cbs.co.kr/" target="_blank" rel="noopener noreferrer">
-              {/* <img src={min11} alt='cbs logo' className='flex w-1/2 mx-auto'/> */}
+              <img src={awana_logo} alt='cbs logo' className='flex w-1/2 mx-auto'/>
                 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                   더 알아보기
                 </button>
@@ -175,6 +175,7 @@ const Sheepgate = () => {
               <div>
               </div>
               <a href="http://www.awanakorea.net/" target="_blank" rel="noopener noreferrer">
+                <img src={awana_logo} alt='awana logo' className='flex w-1/2 mx-auto'/>
                 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                   더 알아보기
                 </button>
@@ -186,6 +187,7 @@ const Sheepgate = () => {
                 <div className='mb-2 font-bold text-lg'>원주세브란스기독병원</div>
     
                 <a href="https://www.ywmc.or.kr/web/www" target="_blank" rel="noopener noreferrer">
+                  <img src={awana_logo} alt='cbs logo' className='flex w-1/2 mx-auto'/>
                   <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                     더 알아보기
                   </button>
@@ -193,7 +195,7 @@ const Sheepgate = () => {
               </div>
               
               {/* <a href="https://www.ywmc.or.kr/web/www" target="_blank" rel="noopener noreferrer">
-                <img src={wonjuhospital} alt='hospital' className='flex w-1/2 mx-auto'/>
+                <img src={awana_logo_2} alt='hospital' className='flex w-1/2 mx-auto'/>
                 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                   더 알아보기
                 </button>
