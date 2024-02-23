@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import logo from '../assets/church_logo.jpeg'
 
 const navigation = [
-  { name: '교회소개', href: '/sheepgate', current: true, dropdown: [{name: '양문교회', link: '/sheepgate'}, {name: '섬기는 사람들', link: ''}, {name: '오시는 길', link: ''}] },
+  { name: '교회소개', href: '/sheepgate', current: true, dropdown: [{name: '양문교회', link: '/sheepgate'}, {name: '섬기는 사람들', link: '/sheepgate'}, {name: '후원단채', link: '/sheepgate'}, {name: '오시는 길', link: '/sheepgate'}] },
   { name: '예배', href: '/introduction', current: false, dropdown: [{name: '예배안내', link: '/introduction'}, {name: '주일예배', link: '/sundayservice'}, {name: '수요예배', link: '/wednesdayservice'}, {name: '특별예배', link: '/specialservice'}, {name: '가정예배', link: '/familyservice'}, {name: '가정예배 나눔', link: '/familysharing'}] },
   { name: '사역', href: '/hishow', current: false, dropdown: [{name: '영유아부 (Hishow)', link: '/hishow'},{name: '어와나 (AWANA)', link: '/awana'}, {name: '아동청소년 (Teens)', link: '/teens'}, {name: '청년부 (여호수아)', link: '/youngadults'}, {name: '목장모임', link: '/smallgroup'}, {name: '주일세미나', link: '/sundayseminar'}, {name: 'with북카페', link: '/bookcafe'}] },
   { name: '커뮤니티', href: '/weeklynews', current: false, dropdown: [{name: '주간소식', link: '/weeklynews'}, {name: '새가족', link: '/newfamily'}, {name: '교회갤러리', link: '/gallery'}, {name: '교회동영상', link: '/videos'}, {name: '교회소식지', link: '/churchnews'}, {name: '선교지 소식', link: '/missionnews'}, {name: 'CBS칼럼', link: '/cbscolumn'}, {name: 'CBS 반가운 오늘', link: '/cbstoday'}, {name: '교회행정서류', link: ''}] },

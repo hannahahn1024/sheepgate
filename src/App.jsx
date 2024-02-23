@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from 'react'
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './page/Home'
 import Sheepgate from "./page/Sheepgate"

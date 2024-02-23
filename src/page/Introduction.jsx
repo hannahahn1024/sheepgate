@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar, { SidebarItem } from '../components/Sidebar'
+import Footer from '../components/Footer'
 
 const Introduction = () => {
   return (
@@ -37,10 +38,16 @@ const Introduction = () => {
           <div className="col-span-1 outline outline-8 rounded-sm outline-amber-400 bg-amber-100"><u className="decoration-amber-400 decoration-4 font-bold">영유아부 예배 (Dream's Kids)</u><p>주일</p><p>10:20</p><p>3층 비전홀</p></div>
           <div className="col-span-1 outline outline-8 rounded-sm outline-indigo-400 bg-indigo-100"><u className="decoration-indigo-400 decoration-4 font-bold">아동 청소년부 예배 (Teens')</u><p>주일</p><p>10:30</p><p>1층 With북카페</p></div>
           <div className="col-span-1 outline outline-8 rounded-sm outline-lime-400 bg-lime-100"><u className="decoration-lime-400 decoration-4 font-bold">목장모임 성경공부모임</u><p>월-금요일</p><p>1층 With북카페</p></div>
+
+          <div>
+          
+          </div>
+
           </div>
         </div>
       </div>
     </div>
+    
   )
 }
 
