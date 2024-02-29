@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './page/Home'
 import Sheepgate from "./page/Sheepgate"
+import Login from "./page/Login"
+import Register from "./page/Register"
 import Awana from "./page/Awana"
 import BookCafe from "./page/BookCafe"
 import FamilyService from "./page/FamilyService"
@@ -34,6 +36,8 @@ function App() {
       <Routes>
         <Route path = "/" element={<Home />} />
         <Route path = "/sheepgate" element={<Sheepgate />} />
+        <Route path = "/login" element={<Login />} />
+        <Route path = "/register" element={<Register />} />
         <Route path = "/awana" element={<Awana />} />
         <Route path = "/bookcafe" element={<BookCafe />} />
         <Route path = "/cbscolumn" element={<CBSColumn />} />
