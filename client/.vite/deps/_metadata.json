@@ -1,0 +1,73 @@
+{
+  "hash": "cebb1d4e",
+  "configHash": "0d62834e",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "3988b1cf",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "793f8a9c",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "367f6dd6",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "ea4a3e7d",
+      "needsInterop": true
+    },
+    "@headlessui/react": {
+      "src": "../../node_modules/@headlessui/react/dist/headlessui.esm.js",
+      "file": "@headlessui_react.js",
+      "fileHash": "78302143",
+      "needsInterop": false
+    },
+    "@heroicons/react/24/outline": {
+      "src": "../../node_modules/@heroicons/react/24/outline/esm/index.js",
+      "file": "@heroicons_react_24_outline.js",
+      "fileHash": "1fca1278",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "50dcd655",
+      "needsInterop": true
+    },
+    "react-icons/bs": {
+      "src": "../../node_modules/react-icons/bs/index.mjs",
+      "file": "react-icons_bs.js",
+      "fileHash": "7322b9c1",
+      "needsInterop": false
+    },
+    "react-icons/rx": {
+      "src": "../../node_modules/react-icons/rx/index.mjs",
+      "file": "react-icons_rx.js",
+      "fileHash": "ec3c40df",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "36a67b6e",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-UWZXFKA6": {
+      "file": "chunk-UWZXFKA6.js"
+    },
+    "chunk-OR4Q2QQW": {
+      "file": "chunk-OR4Q2QQW.js"
+    },
+    "chunk-UPDK7Z2H": {
+      "file": "chunk-UPDK7Z2H.js"
+    }
+  }
+}
