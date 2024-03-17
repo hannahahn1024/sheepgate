@@ -3,6 +3,9 @@ import Sidebar, { SidebarItem } from "../components/Sidebar";
 import { Link } from "react-router-dom";
 
 export default function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <div className="flex">
       <div className="w-40">
@@ -19,11 +22,15 @@ export default function Login() {
           <input
             type="text"
             placeholder="username"
+            value={username}
+            onChange={ev => setUsername(ev.target.value)}
             className="border-b-2 border-slate-300 bg-slate-50 rounded pl-2 pt-2 pb-2 mb-3 w-2/12"
           />
           <input
             type="password"
             placeholder="password"
+            value ={password}
+            onChange ={ev => setPassword(ev.target.value)}/>
             className="border-b-2 border-slate-300 bg-slate-50 rounded pl-2 pt-2 pb-2 mb-3 w-2/12"
           />
           <button className="border-2 border-yellow-700 rounded bg-yellow-600 pl-3 pr-3 text-white font-bold pt-2 pb-2 w-2/12 mb-2 hover:bg-yellow-700">
