@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Sidebar, { SidebarItem } from "../components/Sidebar";
 
 export default function Login() {
-  const[username, setUsername] = useState('');
-  const[password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   async function register(ev) {
     ev.preventDefault();
