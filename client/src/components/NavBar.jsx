@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom"
@@ -12,11 +12,24 @@ const navigation = [
   { name: 'Account', href: '/login', current: false, dropdown: [{name: 'Login', link: '/login'}, {name: 'Register', link: '/register'}]}
 ]
 
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Example() {
+  const [username, setUsername] = useState(null);
+  const [login, setLogin] = useState(false);
+
+  useEffect(() => {
+    fetch('http://localhost:4000/profile', {
+      credentials: 'include',
+    }).then(response => {
+      response.json().then(userInfo => {
+
+      });
+    });
+  }, []);
   return (
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
