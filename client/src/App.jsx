@@ -28,39 +28,43 @@ import WednesdayService from "./page/WednesdayService"
 import Weekly from "./page/Weekly"
 import WeeklyNews from './page/WeeklyNews'
 import YoungAdults from "./page/YoungAdults"
+import { UserContextProvider } from "./page/UserContext"
 
 function App() {
   return (
     <div className='App'>
-      <NavBar/>
-      <Routes>
-        <Route path = "/" element={<Home />} />
-        <Route path = "/sheepgate" element={<Sheepgate />} />
-        <Route path = "/login" element={<Login />} />
-        <Route path = "/register" element={<Register />} />
-        <Route path = "/awana" element={<Awana />} />
-        <Route path = "/bookcafe" element={<BookCafe />} />
-        <Route path = "/cbscolumn" element={<CBSColumn />} />
-        <Route path = "/cbstoday" element={<CBSToday />} />
-        <Route path = "/churchnews" element={<ChurchNews />} />
-        <Route path = "/familyservice" element={<FamilyService />} />
-        <Route path = "/familysharing" element={<FamilySharing />} />
-        <Route path = "/gallery" element={<Gallery />} />
-        <Route path = "/hishow" element={<Hishow />} />
-        <Route path = "/introduction" element={<Introduction />} />
-        <Route path = "/missionnews" element={<MissionNews />} />
-        <Route path = "/newfamily" element={<NewFamily />} />
-        <Route path = "/smallgroup" element={<SmallGroup />} />
-        <Route path = "/specialservice" element={<SpecialService />} />
-        <Route path = "/sundayseminar" element={<SundaySeminar />} />
-        <Route path = "/sundayservice" element={<SundayService />} />
-        <Route path = "/teens" element={<Teens />} />
-        <Route path = "/videos" element={<Videos />} />
-        <Route path = "/wednesdayservice" element={<WednesdayService />} />
-        <Route path = "/weekly" element={<Weekly />} />
-        <Route path = "/weeklynews" element={<WeeklyNews />} />
-        <Route path = "/youngadults" element={<YoungAdults />} />
-      </Routes>
+      <UserContextProvider>
+        <NavBar/>
+        <Routes>
+          <Route path = "/" element={<Home />} />
+          <Route path = "/sheepgate" element={<Sheepgate />} />
+          <Route path = "/login" element={<Login />} />
+          <Route path = "/register" element={<Register />} />
+          <Route path = "/awana" element={<Awana />} />
+          <Route path = "/bookcafe" element={<BookCafe />} />
+          <Route path = "/cbscolumn" element={<CBSColumn />} />
+          <Route path = "/cbstoday" element={<CBSToday />} />
+          <Route path = "/churchnews" element={<ChurchNews />} />
+          <Route path = "/familyservice" element={<FamilyService />} />
+          <Route path = "/familysharing" element={<FamilySharing />} />
+          <Route path = "/gallery" element={<Gallery />} />
+          <Route path = "/hishow" element={<Hishow />} />
+          <Route path = "/introduction" element={<Introduction />} />
+          <Route path = "/missionnews" element={<MissionNews />} />
+          <Route path = "/newfamily" element={<NewFamily />} />
+          <Route path = "/smallgroup" element={<SmallGroup />} />
+          <Route path = "/specialservice" element={<SpecialService />} />
+          <Route path = "/sundayseminar" element={<SundaySeminar />} />
+          <Route path = "/sundayservice" element={<SundayService />} />
+          <Route path = "/teens" element={<Teens />} />
+          <Route path = "/videos" element={<Videos />} />
+          <Route path = "/wednesdayservice" element={<WednesdayService />} />
+          <Route path = "/weekly" element={<Weekly />} />
+          <Route path = "/weeklynews" element={<WeeklyNews />} />
+          <Route path = "/youngadults" element={<YoungAdults />} />
+        </Routes>
+      </UserContextProvider>
+      
     </div>
   )
 }

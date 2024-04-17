@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Sidebar, { SidebarItem } from "../components/Sidebar_sheepgate";
 import SheepImage from "../assets/sheepimage.png";
 import Pastor from "../assets/pastor.png";
+import Pastor2 from "../assets/newpics/pastor2_updated.png";
 import jangro_1 from "../assets/jangro1.png";
 import jangro_2 from "../assets/jangro2.png";
 import jangro_3 from "../assets/jangro3.png";
@@ -168,8 +169,8 @@ const Sheepgate = () => {
           <div className="grid grid-cols-2 gap-12 pb-10 pt-10">
             <div>
               <img
-                src={Pastor}
-                alt="Pastor Image"
+                src={Pastor2}
+                alt="Pastor 2 Image"
                 className="w-2/6 mx-auto border-4 border-slate-500"
               />
             </div>
