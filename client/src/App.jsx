@@ -28,6 +28,8 @@ import WednesdayService from "./page/WednesdayService"
 import Weekly from "./page/Weekly"
 import WeeklyNews from './page/WeeklyNews'
 import YoungAdults from "./page/YoungAdults"
+import AccountSetting from "./page/AccountSettings"
+import CreateNewPost from "./page/CreateNewPost"
 import { UserContextProvider } from "./page/UserContext"
 
 function App() {
@@ -62,6 +64,8 @@ function App() {
           <Route path = "/weekly" element={<Weekly />} />
           <Route path = "/weeklynews" element={<WeeklyNews />} />
           <Route path = "/youngadults" element={<YoungAdults />} />
+          <Route path = "/accountsetting" element={<AccountSetting />} />
+          <Route path = "/createnewpost" element={<CreateNewPost />} />
         </Routes>
       </UserContextProvider>
       

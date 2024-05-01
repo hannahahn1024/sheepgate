@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Sidebar, { SidebarItem } from "../components/Sidebar";
 import { Link, Navigate } from "react-router-dom";
+import { UserContext } from "./UserContext"
 
 
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [redirect, setRedirect] = useState(false);
+  const {setUserInfo} = useContext(UserContext);
 
   async function login(ev) {
     ev.preventDefault();
@@ -18,16 +20,21 @@ export default function Login() {
     });
 
     if (response.ok) {
-      setRedirect(true);
+      response.json().then(userInfo => {
+        setUserInfo(userInfo);
+        setRedirect(true);
+      })
+      
+      // console.log('login')
     }
     else {
       alert('wrong credentials');
     }
   }
 
-  // if(redirect) {
-  //   return <Navigate to={'/'}/>
-  // }
+  if(redirect) {
+    return <Navigate to={'/accountsetting'}/>
+  }
 
   return (
     <div className="flex">

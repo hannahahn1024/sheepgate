@@ -36,12 +36,20 @@ app.post('/login', async (req, res) => {
     const userDoc = await User.findOne({
         username,
     });
+
+    if (!userDoc) {
+        return res.status(400).json('User not found');
+    }
+    
     const passOk = bcrypt.compareSync(password, userDoc.password);
     // res.json(passOk);
     if(passOk){
         jwt.sign({username, id:userDoc._id}, secret, {}, (err,token) => {
             if (err) throw err;
-            res.cookie('token', token).json('ok');
+            res.cookie('token', token).json({
+                id:userDoc._id,
+                username,
+            });
             // res.json(token);
         });
     }
