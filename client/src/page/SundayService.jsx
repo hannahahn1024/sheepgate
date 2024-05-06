@@ -29,14 +29,13 @@ const SundayService = () => {
             <SidebarItem text="가정예배 나눔" path="/familysharing" />
           </Sidebar>
         </div>
-        <div className="flex mx-auto flex-col w-screen">
-          <div className="text-center">주일 예배</div>
-
-          <>
-            {posts.length > 0 && posts.map(post => (
-              <Post {...post}/>
-            ))}
-          </>
+        <div className="flex flex-col mx-auto w-screen">
+        <div className="text-center">주일 예배</div>
+        <div className="grid grid-cols-3 gap-4 mt-4">
+          {posts.map((post, index) => (
+            <Post key={index} {...post} />
+          ))}
+        </div>
 
 
           {/* <div className="flex mx-auto grid-2 mt-4 ">

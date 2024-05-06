@@ -3,6 +3,7 @@ import Sidebar, { SidebarItem } from '../components/Sidebar'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css';
 import {useState} from "react";
+import { Navigate } from "react-router-dom";
 
 const CreateNewPost = () => {
   const [title, setTitle] = useState('');
@@ -23,15 +24,17 @@ const CreateNewPost = () => {
     const response = await fetch('http://localhost:4000/post', {
       method: 'POST',
       body: data,
+      credentials: 'include',
     });
     
     if(response.ok) {
       setRedirect(true);
+      // console.log("redirect Ok");
     }
   }
 
   if (redirect) {
-    return <Navigate to = {'/'} />
+    return <Navigate to = {'/sundayservice'} />
   }
   
   const modules = {
