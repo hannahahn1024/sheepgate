@@ -66,10 +66,15 @@ app.post('/login', async (req, res) => {
 app.get('/profile', (req, res) => {
     const {token} = req.cookies;
     jwt.verify(token, secret, {}, (err, info)=> {
-        if (err) throw err;
-        res.json(info);
+        // if (err) throw err;
+        // res.json(info);
+        if (err) {
+            res.status(401).json({ error: 'Unauthorized' }); 
+        } else {
+            res.json({ info, cookies: req.cookies });
+        }
     });
-    res.json(req.cookies);
+    // res.json(req.cookies);
 });
 
 app.post('/logout', (req, res) => {
@@ -107,5 +112,10 @@ app.get('/post', async (req, res) => {
     );
 });
 
+app.get('/post/:id', async (req, res) => {
+    const {id} = req.params;
+    const postDoc = await Post.findById(id).populate('author', ['username']);
+    res.json(postDoc);
+});
 
 app.listen(4000);

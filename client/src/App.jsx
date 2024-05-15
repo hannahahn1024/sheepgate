@@ -31,6 +31,7 @@ import YoungAdults from "./page/YoungAdults"
 import AccountSetting from "./page/AccountSettings"
 import CreateNewPost from "./page/CreateNewPost"
 import { UserContextProvider } from "./page/UserContext"
+import PostPage from "./components/PostPage"
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
           <Route path = "/youngadults" element={<YoungAdults />} />
           <Route path = "/accountsetting" element={<AccountSetting />} />
           <Route path = "/createnewpost" element={<CreateNewPost />} />
+          <Route path = "/post/:id" element={<PostPage/>} />
         </Routes>
       </UserContextProvider>
       
